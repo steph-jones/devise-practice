@@ -1,0 +1,11 @@
+<h1>Add Hobby</h1>
+<br/>
+<%= form_with(model: @hobby, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :activity_name %>
+    <%= f.text_field :activity_name, required: true, placeholder: "Hobby Name" %>
+  </div>
+
+  <%= f.submit "Create Hobby", class: "btn light-green accent-3" %>
+  <!-- putting nil instead of create taco will give you the default "Create Account" -->
+<% end %>
